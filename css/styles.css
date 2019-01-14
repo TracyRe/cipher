@@ -1,0 +1,11 @@
+button {
+  border-radius: 6px;
+  background-color: #aec3e5;
+  border: 0;
+  padding: 12px 24px 12px 24px;
+  font-weight: bold;
+}
+
+button.reverse {
+  background-color: #fcae6f;
+}
