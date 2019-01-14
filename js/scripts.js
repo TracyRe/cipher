@@ -54,4 +54,24 @@ console.log(rev);
     document.getElementsByClassName("reverse")[1].innerHTML = revSentence(sentence);
     document.getElementsByClassName("sentence")[1].innerHTML = "";
   });
+
+function answer(question) {
+  return "Your question: <em>" + question + "</em><br /> Answer: <strong>How should I know, I'm just a computer.</strong>"
+};
+
+
+
+$('.askme').click(function() {
+  var askQuestion = prompt("What is your question?");
+  document.getElementsByClassName("askme")[1].innerHTML = answer(askQuestion);
+});
+
+
+
+
+
+
+
+
+
 });
