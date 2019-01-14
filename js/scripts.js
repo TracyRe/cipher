@@ -45,15 +45,13 @@ console.log(rev);
 
 
 
-  $("h1").click(function() {
-    document.getElementById("sentence").innerHTML =
-
-    sentence;
+  $('.sentence').click(function() {
+    document.getElementsByClassName("sentence")[1].innerHTML = sentence;
+    document.getElementsByClassName("reverse")[1].innerHTML = "";
   });
 
-  $("h2").click(function() {
-    document.getElementById("reverse").innerHTML =
-
-    revSentence(sentence);
+  $('.reverse').click(function() {
+    document.getElementsByClassName("reverse")[1].innerHTML = revSentence(sentence);
+    document.getElementsByClassName("sentence")[1].innerHTML = "";
   });
 });
