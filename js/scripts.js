@@ -20,14 +20,14 @@ var lastAndFirst = swapOrder(firstAndLast);
 console.log(lastAndFirst);
 
 function firstLastSwapConcat(toMod){
-  return toMod + swapOrder(firstLast(toMod));
+  return swapOrder(firstLast(toMod));
 };
 
 var bothFunctions = firstLastSwapConcat(sentence);
-console.log(bothFunctions);
+console.log(sentence + bothFunctions);
 
 function countCat(toMod) {
-  return toMod.charAt(((toMod.length - 1) / 2).toFixed(0)) + firstLastSwapConcat(toMod);
+  return toMod.charAt(((parseInt(toMod.length - 1) / 2)))+toMod+swapOrder(firstLast(toMod));
 };
 
 var firstCharSentence = countCat(sentence);
@@ -39,7 +39,7 @@ function revSentence(toMod){
   return toMod.join("");
 }
 
-var rev = revSentence(sentence) + countCat(sentence);
+var rev = revSentence(countCat(sentence));
 
 console.log(rev);
 
