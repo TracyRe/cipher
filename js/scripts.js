@@ -1,47 +1,47 @@
 $(document).ready(function() {
 
-var sentence = prompt("Type a sentence.");
+  var sentence = prompt("Type a sentence.");
 
-console.log(sentence);
+  console.log(sentence);
 
-function firstLast (toMod) {
-  return toMod.charAt(0).toUpperCase() + toMod.charAt(toMod.length-1).toUpperCase();
-};
+  function firstLast (toMod) {
+    return toMod.charAt(0).toUpperCase() + toMod.charAt(toMod.length-1).toUpperCase();
+  };
 
-var firstAndLast = firstLast(sentence);
-console.log(firstAndLast);
+  var firstAndLast = firstLast(sentence);
+  console.log(firstAndLast);
 
-function swapOrder(toMod){
-  return toMod.charAt(1) + toMod.charAt(0);
-};
+  function swapOrder(toMod){
+    return toMod.charAt(1) + toMod.charAt(0);
+  };
 
-var lastAndFirst = swapOrder(firstAndLast);
+  var lastAndFirst = swapOrder(firstAndLast);
 
-console.log(lastAndFirst);
+  console.log(lastAndFirst);
 
-function firstLastSwapConcat(toMod){
-  return swapOrder(firstLast(toMod));
-};
+  function firstLastSwapConcat(toMod){
+    return swapOrder(firstLast(toMod));
+  };
 
-var bothFunctions = firstLastSwapConcat(sentence);
-console.log(sentence + bothFunctions);
+  var bothFunctions = firstLastSwapConcat(sentence);
+  console.log(sentence + bothFunctions);
 
-function countCat(toMod) {
-  return toMod.charAt(((parseInt(toMod.length - 1) / 2)))+toMod+swapOrder(firstLast(toMod));
-};
+  function countCat(toMod) {
+    return toMod.charAt(((parseInt(toMod.length - 1) / 2)))+toMod+swapOrder(firstLast(toMod));
+  };
 
-var firstCharSentence = countCat(sentence);
-console.log(firstCharSentence);
+  var firstCharSentence = countCat(sentence);
+  console.log(firstCharSentence);
 
-function revSentence(toMod){
-  toMod = toMod.split("");
-  toMod = toMod.reverse();
-  return toMod.join("");
-}
+  function revSentence(toMod){
+    toMod = toMod.split("");
+    toMod = toMod.reverse();
+    return toMod.join("");
+  }
 
-var rev = revSentence(countCat(sentence));
+  var rev = revSentence(countCat(sentence));
 
-console.log(rev);
+  console.log(rev);
 
 
 
@@ -56,32 +56,27 @@ console.log(rev);
   });
 
 
-  document.getElementById("char-count").innerHTML = "You typed " + sentence.length + " characters. You sure type a lot.";
+    document.getElementById("char-count").innerHTML = "You typed " + sentence.length + " characters. You sure type a lot.";
 
-function answer(question) {
-  return "Your question: <em>" + question + "</em><br /> Answer: <strong>How should I know, I'm just a computer.</strong>"
-};
-
-
-
-$('.askme').click(function() {
-  var askQuestion = prompt("What is your question?");
-  document.getElementsByClassName("askme")[1].innerHTML = answer(askQuestion);
-});
-
-function leapyearCount(year) {
-  return parseInt((2016 - year)/4);
-};
+  function answer(question) {
+    return "Your question: <em>" + question + "</em><br /> Answer: <strong>How should I know, I'm just a computer.</strong>"
+  };
 
 
-$('.leapyear').click(function(){
-  var yearBorn = parseInt(prompt("What year were you born?"));
-  document.getElementsByClassName("leapyear")[1].innerHTML = "You have lived through " + leapyearCount(yearBorn) + " leap years.";
-});
+  $('.askme').click(function() {
+    var askQuestion = prompt("What is your question?");
+    document.getElementsByClassName("askme")[1].innerHTML = answer(askQuestion);
+  });
+
+  function leapyearCount(year) {
+    return parseInt((2016 - year)/4);
+  };
 
 
-
-
+  $('.leapyear').click(function(){
+    var yearBorn = parseInt(prompt("What year were you born?"));
+    document.getElementsByClassName("leapyear")[1].innerHTML = "You have lived through " + leapyearCount(yearBorn) + " leap years.";
+  });
 
 
 });
