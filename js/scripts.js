@@ -55,6 +55,9 @@ console.log(rev);
     document.getElementsByClassName("sentence")[1].innerHTML = "";
   });
 
+
+  document.getElementById("char-count").innerHTML = "You typed " + sentence.length + " characters. You sure type a lot.";
+
 function answer(question) {
   return "Your question: <em>" + question + "</em><br /> Answer: <strong>How should I know, I'm just a computer.</strong>"
 };
@@ -66,8 +69,15 @@ $('.askme').click(function() {
   document.getElementsByClassName("askme")[1].innerHTML = answer(askQuestion);
 });
 
+function leapyearCount(year) {
+  return parseInt((2016 - year)/4);
+};
 
 
+$('.leapyear').click(function(){
+  var yearBorn = parseInt(prompt("What year were you born?"));
+  document.getElementsByClassName("leapyear")[1].innerHTML = "You have lived through " + leapyearCount(yearBorn) + " leap years.";
+});
 
 
 
