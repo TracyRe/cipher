@@ -10,6 +10,7 @@ Word cipher page to practice Javascript for Epicodus Front End Development cours
 
 ## Setup/Installation Requirements
 
+* View at https://tracyre.github.io/cipher/
 * Clone from https://github.com/TracyRe/cipher.git
 * Open in browser of your choice
 * Edit files as desired
